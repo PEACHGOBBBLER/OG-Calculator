@@ -16,31 +16,31 @@
             <div class="calcBody">
                 <div class="displayContainer">
                     <div class="calcDisplay">
-                        <p id="output">|</p>
+                        <p class="calcText" id="output">|</p>
                     </div>
                 </div>
                 <div class="calcButtons">
                     <div class="numButtons">
-                        <button class="buttons" id="one">1</button>
-                        <button class="buttons" id="two">2</button>
-                        <button class="buttons" id="three">3</button>
-                        <button class="buttons"id="four">4</button>
-                        <button class="buttons" id="five">5</button>
-                        <button class="buttons" id="six">6</button>
-                        <button class="buttons" id="seven">7</button>
-                        <button class="buttons" id="eight">8</button>
-                        <button class="buttons" id="nine">9</button>
-                        <button class="buttons" id="zero">0</button>
-                        <button class="buttons" id="decimal">.</button>
-                        <button class="buttons" id="back">BACK</button>
+                        <button class="buttons" id="one" onclick="display(1)">1</button>
+                        <button class="buttons" id="two" onclick="display(2)">2</button>
+                        <button class="buttons" id="three" onclick="display(3)">3</button>
+                        <button class="buttons"id="four" onclick="display(4)">4</button>
+                        <button class="buttons" id="five" onclick="display(5)">5</button>
+                        <button class="buttons" id="six" onclick="display(6)">6</button>
+                        <button class="buttons" id="seven" onclick="display(7)">7</button>
+                        <button class="buttons" id="eight" onclick="display(8)">8</button>
+                        <button class="buttons" id="nine" onclick="display(9)">9</button>
+                        <button class="buttons" id="zero" onclick="display(0)">0</button>
+                        <button class="buttons" id="decimal" onclick="display()">.</button>
+                        <button class="buttons" id="back" onclick="back()">BACK</button>
                     </div>
                     <div class="opButtons">
                         <button class="buttons ops" id="plus">+</button>
-                        <button class="buttons ops" id="minus">-</button>
+                        <button class="buttons ops" id="minus" >-</button>
                         <button class="buttons ops" id="times">*</button>
                         <button class="buttons ops" id="divide">/</button>
-                        <button class="buttons ops" id="equals">=</button>
-                        <button class="buttons ops" id="clear">CL</button>
+                        <button class="buttons ops" id="equals" onclick="operate()">=</button>
+                        <button class="buttons ops" id="clear" onclick="removeAll()">CL</button>
                 </div>
             </div>
             <div class="footer">

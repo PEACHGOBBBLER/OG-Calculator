@@ -1,4 +1,34 @@
-var output = document.getElementById("output");
+let output = document.getElementById("output");
+let buttonsValue = document.querySelector(".buttons");
+var maxlength = 12;
+
+
+$('p.clacText').text(function (_, text) {
+    return $.trim(text).substring(0, maxlength);
+});
+
+function display(value) {
+    if (output.textContent == "|") {
+    output.textContent = "";
+    }
+
+    output.textContent += value;
+}
+
+function back() {
+    let str = output.textContent;
+    str = str.slice(0, -1);
+    output.textContent = str;
+
+    if (output.textContent == "") {
+        output.textContent = "|";
+    }
+}
+
+function removeAll() {
+    output.textContent = "|";
+    return output;
+}
 
 function addition(num1, num2) {
     sum = num1 + num2;
