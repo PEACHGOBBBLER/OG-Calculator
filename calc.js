@@ -22,7 +22,7 @@ function display(value) {
 
     output.textContent += value;
 
-    ops = 
+    op = output.textContent.match(/\*|\/|\+|\-/);
 
     numbers = output.textContent;
     numbers = numbers.split("+").join(",").split("-").join(",").split("*").join(",").split("/").join(",").split(",");
