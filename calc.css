@@ -40,6 +40,7 @@ body {
     background: linear-gradient(135deg, rgb(59, 59, 59) 0%, rgb(36, 36, 36) 60%, rgb(12, 12, 12) 100%);
     border-radius: 10px;
     border: 2px solid magenta;
+    overflow: hidden;
 
 }
 

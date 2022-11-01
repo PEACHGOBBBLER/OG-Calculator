@@ -1,11 +1,19 @@
 let output = document.getElementById("output");
 let buttonsValue = document.querySelector(".buttons");
-var maxlength = 12;
+var numbers = 0;
+var num1 = 0;
+var num2 = 0;
+var num3 = 0;
+var num4 = 0;
+var num5 = 0;
+var ops = "";
+var op1 = "";
+var op2 = "";
+var op3 = "";
 
-
-$('p.clacText').text(function (_, text) {
-    return $.trim(text).substring(0, maxlength);
-});
+if (output.textContent.length > 12) {
+    output.textContent = output.textContent.substring(0, 12);
+}
 
 function display(value) {
     if (output.textContent == "|") {
@@ -13,7 +21,22 @@ function display(value) {
     }
 
     output.textContent += value;
+
+    ops = 
+
+    numbers = output.textContent;
+    numbers = numbers.split("+").join(",").split("-").join(",").split("*").join(",").split("/").join(",").split(",");
+    num1 = numbers[0];
+    num2 = numbers[1];
+    num3 = numbers[2];
+    num4 = numbers[3];
+    num5 = numbers[4];
+
+ 
+    
 }
+
+
 
 function back() {
     let str = output.textContent;
@@ -50,14 +73,18 @@ function division(num1, num2) {
     return sum;
 }
 
-function operate(num1, opChosen, num2) {
-    if (opChosen == "+") {
+function operate(num1, op, num2) {
+    if (op == "+") {
         addition(num1, num2);
-    } else if (opChosen == "-") {
+        output.textContent = sum;
+    } else if (op == "-") {
         subtraction(num1, num2);
-    } else if (opChosen == "*") {
+        output.textContent = sum;
+    } else if (op == "*") {
         multiplication(num1, num2);
-    } else {
+        output.textContent = sum;
+    } else if (op == "/") {
         division(num1, num2);
+        output.textContent = sum; 
     }
 }
